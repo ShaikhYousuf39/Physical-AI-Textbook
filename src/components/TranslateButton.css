@@ -1,0 +1,125 @@
+/* TranslateButton Styles */
+.translate-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.translate-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(79, 172, 254, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.translate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(79, 172, 254, 0.4);
+}
+
+.translate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.translate-btn.urdu {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.urdu-text {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+  font-size: 16px;
+  direction: rtl;
+}
+
+.translate-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.translate-error {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #c33;
+  z-index: 100;
+  animation: shake 0.3s ease;
+  white-space: nowrap;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.translate-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  animation: slideInRight 0.3s ease;
+  font-weight: 500;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .translate-error {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 40px);
+  }
+
+  .translate-notification {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 40px);
+  }
+}

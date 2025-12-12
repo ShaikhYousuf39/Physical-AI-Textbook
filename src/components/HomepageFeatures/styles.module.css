@@ -1,0 +1,492 @@
+/* Section Header Styles */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionTitleLight {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sectionSubtitleLight {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Key Features Section */
+.features {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.featureCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
+}
+
+.featureIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.featureTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+}
+
+/* Course Modules Section */
+.modulesSection {
+  padding: 4rem 0;
+  background: white;
+}
+
+.moduleCard {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  color: white;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.moduleCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(102, 126, 234, 0.3);
+}
+
+.moduleHeader {
+  margin-bottom: 1.5rem;
+}
+
+.moduleNumber {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.moduleTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.moduleDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+.moduleTopics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.moduleTopics li {
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.moduleTopics li:before {
+  content: "✓ ";
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+/* Tech Stack Section */
+.techStackSection {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.techStackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.techCategory {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+}
+
+.techCategory:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.12);
+}
+
+.techCategoryTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #667eea;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.techTag {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* How RAG Works Section */
+.ragSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.ragStepsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ragStep {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.ragStep:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.ragStepNumber {
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: #667eea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.ragStepTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.ragStepDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Call to Action Section */
+.ctaSection {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ctaDescription {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.9rem 2.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.ctaButtonSecondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  font-size: 1.1rem;
+  padding: 0.9rem 2.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaButtonSecondary:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 996px) {
+  .sectionTitle,
+  .sectionTitleLight,
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .moduleTopics {
+    grid-template-columns: 1fr;
+  }
+
+  .ragStepsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButton,
+  .ctaButtonSecondary {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .featureIcon {
+    font-size: 3rem;
+  }
+
+  .sectionTitle,
+  .sectionTitleLight,
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+
+  .sectionSubtitle,
+  .sectionSubtitleLight {
+    font-size: 1rem;
+  }
+
+  .moduleCard {
+    padding: 1.5rem;
+  }
+
+  .techStackGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Authentication Section */
+.authSection {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.authContent {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.authTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.authDescription {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.authBenefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.authBenefit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.authBenefit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+}
+
+.authBenefitIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.authButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.authButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.authButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.authButtonOutline {
+  border: 2px solid #667eea;
+  color: #667eea;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.authButtonOutline:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .authTitle {
+    font-size: 2rem;
+  }
+
+  .authDescription {
+    font-size: 1rem;
+  }
+
+  .authBenefits {
+    grid-template-columns: 1fr;
+  }
+
+  .authButtons {
+    flex-direction: column;
+  }
+
+  .authButton,
+  .authButtonOutline {
+    width: 100%;
+  }
+}
