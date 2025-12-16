@@ -159,4 +159,4 @@ If you are just starting and want to follow along:
 
 ---
 
-Next: [Chapter 3: Module 1 - The Robotic Nervous System (ROS 2)](../chapter-03/intro.md)
+Next: [Back to Intro](../intro.md)
