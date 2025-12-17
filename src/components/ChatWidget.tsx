@@ -20,7 +20,8 @@ export const ChatWidget: React.FC = () => {
     {
       id: '0',
       role: 'assistant',
-      content: 'Hello! I\'m your AI tutor for Physical AI & Humanoid Robotics. Ask me anything about the textbook!',
+      content:
+        "Hello! I'm your AI tutor for Physical AI & Humanoid Robotics. Ask me anything about the textbook!",
     },
   ]);
   const [input, setInput] = useState('');
@@ -50,9 +51,7 @@ export const ChatWidget: React.FC = () => {
     setIsLoading(true);
 
     try {
-      // Get user ID from localStorage if available
       const userId = localStorage.getItem('userId') || undefined;
-
       const response = await chatAPI.query(input, userId);
 
       const assistantMessage: Message = {
@@ -88,7 +87,7 @@ export const ChatWidget: React.FC = () => {
   return (
     <div className={`chat-widget ${isOpen ? 'open' : ''}`}>
       <button className="chat-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle chat">
-        {isOpen ? '✕' : '💬'}
+        {isOpen ? 'Close' : 'Chat'}
       </button>
 
       {isOpen && (
@@ -104,9 +103,7 @@ export const ChatWidget: React.FC = () => {
                 <div className="message-content">{msg.content}</div>
                 {msg.sources && msg.sources.length > 0 && (
                   <div className="message-sources">
-                    <small>
-                      📚 Sources: {msg.sources.map((s) => s.chapter).join(', ')}
-                    </small>
+                    <small>Sources: {msg.sources.map((s) => s.chapter).join(', ')}</small>
                   </div>
                 )}
               </div>

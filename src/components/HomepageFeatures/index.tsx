@@ -295,7 +295,6 @@ export default function HomepageFeatures(): ReactNode {
 
       {/* Authentication section removed - use Python 3.11 to re-enable */}
 
-      */}
 
       {/* Call to Action Section */}
       <section className={styles.ctaSection}>
