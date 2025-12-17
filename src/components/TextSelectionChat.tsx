@@ -89,13 +89,17 @@ export const TextSelectionChat: React.FC = () => {
           className="close-btn"
           onClick={() => setShowPopup(false)}
           aria-label="Close"
+          type="button"
         >
-          ✕
+          ×
         </button>
 
         <div className="selected-text-preview">
           <strong>Selected text:</strong>
-          <p>{selectedText.substring(0, 150)}{selectedText.length > 150 ? '...' : ''}</p>
+          <p>
+            {selectedText.substring(0, 150)}
+            {selectedText.length > 150 ? '...' : ''}
+          </p>
         </div>
 
         <div className="question-input">
@@ -107,7 +111,7 @@ export const TextSelectionChat: React.FC = () => {
             onKeyPress={handleKeyPress}
             disabled={isLoading}
           />
-          <button onClick={handleAsk} disabled={isLoading || !question.trim()}>
+          <button onClick={handleAsk} disabled={isLoading || !question.trim()} type="button">
             {isLoading ? '...' : 'Ask'}
           </button>
         </div>
