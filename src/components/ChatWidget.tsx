@@ -87,7 +87,7 @@ export const ChatWidget: React.FC = () => {
   return (
     <div className={`chat-widget ${isOpen ? 'open' : ''}`}>
       <button className="chat-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle chat">
-        {isOpen ? 'Close' : 'Chat'}
+        {isOpen ? '×' : '💬'}
       </button>
 
       {isOpen && (
