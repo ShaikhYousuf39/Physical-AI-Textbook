@@ -240,10 +240,10 @@ export default function HomepageFeatures(): ReactNode {
       <section className={styles.modulesSection}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <Heading as="h2" className={styles.sectionTitle}>
+            <Heading as="h2" className={styles.sectionTitleLight}>
               Course Modules
             </Heading>
-            <p className={styles.sectionSubtitle}>
+            <p className={styles.sectionTitleLight}>
               A comprehensive curriculum covering the full spectrum of Physical AI and Humanoid Robotics
             </p>
           </div>

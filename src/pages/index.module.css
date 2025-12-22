@@ -3,11 +3,58 @@
  * and scoped locally.
  */
 
+:global(:root) {
+  --hp-bg: #f4f2ed;
+  --hp-ink: #1b1f2a;
+  --hp-bg-rgb: 244, 242, 237;
+  --hp-ink-rgb: 27, 31, 42;
+  --hp-radius: 4px;
+  --hp-radius-sm: 2px;
+  --hp-font-heading: "Space Grotesk", "Trebuchet MS", "Segoe UI", sans-serif;
+  --hp-font-body: "Work Sans", "Verdana", "Tahoma", sans-serif;
+}
+
+:global([data-theme='dark']) {
+  --hp-bg: #0e1014;
+  --hp-ink: #ffffff;
+  --hp-bg-rgb: 14, 16, 20;
+  --hp-ink-rgb: 255, 255, 255;
+}
+
 .heroBanner {
-  padding: 4rem 0;
+  padding: 4.5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: radial-gradient(
+      1200px 500px at 20% -20%,
+      rgba(var(--hp-ink-rgb), 0.14),
+      transparent 60%
+    ),
+    var(--hp-bg);
+  color: var(--hp-ink);
+  border-bottom: 1px solid rgba(var(--hp-ink-rgb), 0.12);
+}
+
+.heroBanner::after {
+  content: "";
+  position: absolute;
+  inset: auto 8% 12% 8%;
+  height: 1px;
+  background: rgba(var(--hp-ink-rgb), 0.1);
+}
+
+.heroBanner :global(.hero__title) {
+  font-family: var(--hp-font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.heroBanner :global(.hero__subtitle) {
+  font-family: var(--hp-font-body);
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  color: rgba(var(--hp-ink-rgb), 0.75);
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +67,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.buttons :global(.button) {
+  background: var(--hp-ink);
+  color: var(--hp-bg);
+  border: 1px solid var(--hp-ink);
+  border-radius: var(--hp-radius-sm);
+  font-family: var(--hp-font-body);
+  letter-spacing: 0.02em;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.buttons :global(.button):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(var(--hp-ink-rgb), 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .buttons :global(.button) {
+    transition: none;
+  }
 }

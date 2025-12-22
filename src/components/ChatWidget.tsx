@@ -92,7 +92,37 @@ export const ChatWidget: React.FC = () => {
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label="Toggle chat"
       >
-        {isOpen ? '×' : '💬'}
+        {isOpen ? (
+          <svg
+            className="chat-toggle-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M6 6l12 12M18 6l-12 12"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeWidth="2"
+            />
+          </svg>
+        ) : (
+          <svg
+            className="chat-toggle-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M7 7h10a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H12l-4.5 3V18H7a3 3 0 0 1-3-3v-5a3 3 0 0 1 3-3z"
+              fill="none"
+              stroke="currentColor"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        )}
       </button>
 
       {isOpen && (
