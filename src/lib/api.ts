@@ -3,11 +3,18 @@
  */
 import axios from 'axios';
 
-// Prefer env var, fall back to deployed backend
+// Prefer runtime or build-time env overrides, fall back by environment.
 // @ts-ignore - Docusaurus injects customFields at build time
+const DEV_API_BASE_URL = 'http://localhost:8000/api';
+const PROD_API_BASE_URL = 'https://backend-cfej.onrender.com/api';
+const hasProcessEnv =
+  typeof process !== 'undefined' && typeof process.env !== 'undefined';
+const apiEnvUrl = hasProcessEnv ? process.env.REACT_APP_API_URL : undefined;
+const nodeEnv = hasProcessEnv ? process.env.NODE_ENV : undefined;
 const API_BASE_URL =
   (typeof window !== 'undefined' && (window as any).REACT_APP_API_URL) ||
-  'https://backend-cfej.onrender.com/api';
+  apiEnvUrl ||
+  (nodeEnv === 'development' ? DEV_API_BASE_URL : PROD_API_BASE_URL);
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
